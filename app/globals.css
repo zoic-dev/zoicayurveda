@@ -1,0 +1,144 @@
+:root {
+  --primary-font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  margin: 0px !important;
+  font-family: var(--primary-font-family) !important;
+  background-color: linear-gradient(180deg, #ffffff 0%, #f3faf7 100%);;
+}
+
+.MuiTypography-root {
+  font-family: var(--primary-font-family) !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar-links {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.navbar-links:hover {
+  color: #EC1C24;
+}
+
+.active {
+  color: #EC1C24;
+}
+
+.dropdown1 {
+  position: relative;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 2px 8px 16px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0px 10px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown1:hover .dropdown-content {
+  display: block;
+}
+
+.product-category-image{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.product-category-text{
+  text-align: center;
+}
+
+.why-choose-us-image {
+  width: 33%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+/* Tablet (medium screens) */
+@media (max-width: 992px) {
+  .why-choose-us-image {
+    width: 45%;
+  }
+}
+
+/* Mobile (small screens) */
+@media (max-width: 600px) {
+  .why-choose-us-image {
+    width: 65%;
+  }
+}
+
+/* Mobile (small screens) */
+@media (max-width: 400px) {
+  .why-choose-us-image {
+    width: 100%;
+  }
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
