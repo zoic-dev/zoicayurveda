@@ -10,174 +10,200 @@ import {
     Stack,
     Divider,
 } from "@mui/material";
+import FactoryIcon from "@mui/icons-material/Factory";
+import ScienceIcon from "@mui/icons-material/Science";
 import PublicIcon from "@mui/icons-material/Public";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 
 export default function PageContent() {
     return (
-        <Box sx={{ bgcolor: "#f7f9fc" }}>
-            {/* HERO SECTION */}
+        <Box sx={{ bgcolor: "#f8faf8" }}>
+
+            {/* HERO */}
             <Box
                 sx={{
                     py: 10,
-                    background: "linear-gradient(135deg, #E42527 0%, #E42527 100%)",
-                    color: "white",
+                    background:
+                        "linear-gradient(rgba(15,61,46,0.85), rgba(15,61,46,0.85)), url('/images/herbal-bg.jpg')",
+                    backgroundSize: "cover",
+                    color: "#fff",
                     textAlign: "center",
                 }}
             >
                 <Container maxWidth="md">
-                    <Typography variant="h3" fontWeight="bold" gutterBottom>
-                        Zoic Biotech
+                    <Typography variant="h3" fontWeight={700} gutterBottom>
+                        About Zoic Group
                     </Typography>
                     <Typography variant="h6" sx={{ opacity: 0.9 }}>
-                        Leading Pharma Third-Party Manufacturing Company Since 1990
+                        Since 1990 – Improving Quality of Life through Ayurvedic & Pharmaceutical Excellence
                     </Typography>
                 </Container>
             </Box>
 
-            {/* ABOUT CONTENT */}
-            <Container maxWidth="lg" sx={{ py: 5 }}>
-                <Typography variant="h4" fontWeight="bold" gutterBottom>
-                    About Us
+            {/* INTRO */}
+            <Container maxWidth="lg" sx={{ py: 8 }}>
+                <Typography variant="h4" fontWeight={700} gutterBottom>
+                    Our Journey
                 </Typography>
 
-                <Typography variant="body1" color="text.secondary" paragraph>
-                    Established in 1990, Zoic Biotech is committed to improving quality of
-                    life through world-class pharmaceutical manufacturing. With a strong
-                    Quality Management System (QMS), we implement Total Quality
-                    Management across all operations.
+                <Typography paragraph color="text.secondary">
+                    Zoic was started in the year 1990 with a vision to be a Leading National Healthcare Company, improving Quality of Life. The mission of Zoic is to provide standardized and researched Ayurvedic healthcare products. We have a sturdy QMS system which implements the Total Quality Management in our entire group concerns.
                 </Typography>
 
-                <Typography variant="body1" color="text.secondary" paragraph>
-                    Our unit is certified with ISO 9001:2008 and accredited with
-                    WHO-GMP certification. Our continuous focus on quality, hygiene,
-                    innovation, and ethical standards has positioned us as a trusted name
-                    in the pharmaceutical industry. Currently, we manufacture more than
-                    1000 formulations.
+                <Typography paragraph color="text.secondary">
+                    Our relentless emphasis on quality, hygiene, traditional values and latest technologies along with continuous up-gradation of the unit and upholding high ethical standards has ensured us pre-eminent position in the Ayurvedic & Pharma market. We at ZOIC GROUP are determined to take Medicines to the realms of scientific research, development and production.
                 </Typography>
             </Container>
 
-            {/* CORE VALUES SECTION */}
-            <Container maxWidth="lg" sx={{ pb: 8 }}>
+            <Divider />
+
+            {/* MANUFACTURING UNITS */}
+            <Container maxWidth="lg" sx={{ py: 8 }}>
+                <Typography variant="h4" fontWeight={700} gutterBottom>
+                    ZOIC Group Manufacturing Units
+                </Typography>
+
+                <Typography color="text.secondary" paragraph>
+                    At present, Zoic Group is manufacturing all kinds of Ayurvedic Medicines, Herbal Personal care products, Food supplements/Neutraceuticals and allopathic drugs.
+                </Typography>
+
                 <Grid container spacing={4}>
-                    {/* Global Presence */}
+
+                    {/* UNIT 1 */}
                     <Grid size={{ xs: 12, md: 4 }}>
-                        <Card
-                            sx={{
-                                pt: 3,
-                                height: "100%",
-                                textAlign: "center",
-                                borderTop: "5px solid #e53935",
-                                boxShadow: 4
-                            }}
-                        >
-                            <PublicIcon sx={{ fontSize: 50, color: "#e53935" }} />
+                        <Card sx={{ height: "100%", boxShadow: 4 }}>
                             <CardContent>
-                                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                                    Global Presence
+                                <FactoryIcon sx={{ fontSize: 40, color: "#2e7d32" }} />
+                                <Typography variant="h6" fontWeight={700} mt={1}>
+                                    UNIT 1: ZOIC Pharmaceuticals
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    To be the best in the business and serve clients worldwide
-                                    with premium quality products at competitive prices.
+
+                                <Typography variant="body2" color="text.secondary" mt={1}>
+                                    (Herbal Medicines & Personal Care Products)
+                                </Typography>
+
+                                <Typography mt={2}>
+                                    SECTIONS: SYRUP , CAPSULES , TABLETS , POWDERS , OILS , OINTMENTS, SOAPS & COMPLETE COSMETIC RANGE
+                                </Typography>
+
+                                <Typography mt={2} variant="body2">
+                                    Plot No. 194, Industrial Area, Sector 82 (JLPL), Mohali (Punjab)
                                 </Typography>
                             </CardContent>
                         </Card>
                     </Grid>
 
-                    {/* Our Quality */}
+                    {/* UNIT 2 */}
                     <Grid size={{ xs: 12, md: 4 }}>
-                        <Card
-                            sx={{
-                                pt: 3,
-                                height: "100%",
-                                textAlign: "center",
-                                borderTop: "5px solid #1565c0",
-                                boxShadow: 4
-                            }}
-                        >
-                            <VerifiedIcon sx={{ fontSize: 50, color: "#1565c0" }} />
+                        <Card sx={{ height: "100%", boxShadow: 4 }}>
                             <CardContent>
-                                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                                    Our Quality
+                                <ScienceIcon sx={{ fontSize: 40, color: "#1565c0" }} />
+                                <Typography variant="h6" fontWeight={700} mt={1}>
+                                    UNIT 2: VZOIC Healthcare Pvt. Ltd.
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Committed to global wellness by delivering high-quality
-                                    healthcare and personal care products backed by strict GMP
-                                    standards.
+
+                                <Typography variant="body2" color="text.secondary" mt={1}>
+                                    (Nutraceuticals/ Dietary Supplements)
+                                </Typography>
+
+                                <Typography mt={2}>
+                                    SECTIONS: SYRUP , CAPSULES , TABLETS & POWDERS
+                                </Typography>
+
+                                <Typography mt={2} variant="body2">
+                                    Plot No. 195, Industrial Area, Sector 82 (JLPL), Mohali (Punjab)
                                 </Typography>
                             </CardContent>
                         </Card>
                     </Grid>
 
-                    {/* Our Strengths */}
+                    {/* UNIT 3 */}
                     <Grid size={{ xs: 12, md: 4 }}>
-                        <Card
-                            sx={{
-                                pt: 3,
-                                height: "100%",
-                                textAlign: "center",
-                                borderTop: "5px solid #43a047",
-                                boxShadow: 4
-                            }}
-                        >
-                            <WorkspacePremiumIcon
-                                sx={{ fontSize: 50, color: "#43a047" }}
-                            />
+                        <Card sx={{ height: "100%", boxShadow: 4 }}>
                             <CardContent>
-                                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                                    Our Strengths
+                                <VerifiedIcon sx={{ fontSize: 40, color: "#c62828" }} />
+                                <Typography variant="h6" fontWeight={700} mt={1}>
+                                    UNIT 3: VZOIC Healthcare Pvt. Ltd.
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Zero-debt company with strong infrastructure capabilities to
-                                    support customized client requirements and future expansion.
+
+                                <Typography variant="body2" color="text.secondary" mt={1}>
+                                    (Allopathic Drugs / Non Beta)
+                                </Typography>
+
+                                <Typography mt={2}>
+                                    SECTIONS: SYRUP , CAPSULES , TABLETS & OINTMENTS
+                                </Typography>
+
+                                <Typography mt={2} variant="body2">
+                                    Plot No. 236, Ind. Area, Ph-9, Mohali (Punjab)
                                 </Typography>
                             </CardContent>
                         </Card>
                     </Grid>
+
                 </Grid>
             </Container>
 
             <Divider />
 
-            {/* CREATION SECTION */}
+            {/* SERVICES */}
             <Container maxWidth="lg" sx={{ py: 8 }}>
-                <Typography variant="h4" fontWeight="bold" gutterBottom>
-                    Manufacturing Excellence
-                </Typography>
+                <Grid container spacing={6}>
 
-                <Typography variant="body1" color="text.secondary" paragraph>
-                    Our processing unit is equipped with advanced manufacturing
-                    technologies to ensure efficiency and scalability while preserving
-                    the purity of ingredients.
-                </Typography>
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <Typography variant="h5" fontWeight={700} gutterBottom>
+                            Partner With Us – PCD/Franchise
+                        </Typography>
 
-                <Typography variant="body1" color="text.secondary">
-                    All procedures strictly follow WHO-GMP guidelines and ISO 9001:2008
-                    quality standards to ensure safety, consistency, and reliability.
-                </Typography>
+                        <Typography color="text.secondary">
+                            The Zoic Group intends to partner with marketing & distribution companies for Ayurvedic/Herbal products to further expand our franchise into new National/International markets.
+                        </Typography>
+                    </Grid>
+
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <Typography variant="h5" fontWeight={700} gutterBottom>
+                            Contract Manufacturing
+                        </Typography>
+
+                        <Typography color="text.secondary">
+                            We deal in Contract/Third Party manufacturing of all kinds of Ayurvedic Medicines, Herbal Personal care products, Food supplements/Neutraceuticals and allopathic drugs. We are completely flexible with our services which means everything from formulation to packaging can be done according to the buyer’s requirement. We also offer the most competitive MOQ (Minimum Order Quantity) in the industry.
+                        </Typography>
+                    </Grid>
+
+                </Grid>
             </Container>
 
-            {/* PACKAGING SECTION */}
-            <Box sx={{ bgcolor: "#ffffff" }}>
-                <Container maxWidth="lg" sx={{ py: 8 }}>
-                    <Typography variant="h4" fontWeight="bold" gutterBottom>
-                        Packaging & Quality Control
+            <Divider />
+
+            {/* ACCREDITATIONS */}
+            <Box sx={{ bgcolor: "#eef5ef" }}>
+                <Container maxWidth="lg" sx={{ py: 8, textAlign: "center" }}>
+                    <Typography variant="h4" fontWeight={700} gutterBottom>
+                        Accreditations
                     </Typography>
 
-                    <Typography variant="body1" color="text.secondary" paragraph>
-                        Our bottling and packaging segment adheres to strict international
-                        quality norms. Every product undergoes rigorous testing before
-                        packaging to ensure safety and effectiveness.
-                    </Typography>
-
-                    <Typography variant="body1" color="text.secondary">
-                        With precision filling equipment and a modern Quality Control lab,
-                        we monitor raw materials and finished products to maintain the
-                        highest pharmaceutical standards.
+                    <Typography color="text.secondary">
+                        All our units are accredited with ISO 9001:2015 certification and W.H.O -G.M.P Certified.
                     </Typography>
                 </Container>
             </Box>
+
+            <Divider />
+
+            {/* BUSINESS OPERATIONS */}
+            <Container maxWidth="lg" sx={{ py: 8 }}>
+                <Stack direction="row" spacing={2} alignItems="center">
+                    <PublicIcon sx={{ fontSize: 40, color: "#2e7d32" }} />
+                    <Typography variant="h5" fontWeight={700}>
+                        Business Operations
+                    </Typography>
+                </Stack>
+
+                <Typography mt={2} color="text.secondary">
+                    ZOIC’s business operations spread all over India. Our supply chain is through Redistribution Stockists in various states.
+                </Typography>
+            </Container>
+
         </Box>
     );
 }

@@ -34,14 +34,14 @@ const NavbarContainer = styled(AppBar)`
 `;
 
 const NavLink = styled("span")(({ active }) => ({
-    color: active ? "#E42527" : "#000",
+    color: active ? "#28711D" : "#000",
     fontSize: "16px",
     fontWeight: 500,
     transition: "color 0.3s ease",
     textDecoration: "none",
     cursor: "pointer",
     "&:hover": {
-        color: "#E42527",
+        color: "#28711D",
     },
 }));
 
@@ -72,7 +72,7 @@ const DropdownMenu = styled("div")`
 
     &:hover {
       background-color: #f8f8f8;
-      color: #E42527;
+      color: #28711D;
     }
   }
 `;
@@ -124,7 +124,7 @@ export default function Navbar() {
                 px={2}
                 py={0.5}
                 sx={{
-                    background: "#E42527",
+                    background: "#28711D",
                     color: "white",
                     display: "flex",
                     alignItems: "center",
@@ -217,10 +217,10 @@ export default function Navbar() {
                     <Box>
                         <Link href="/">
                             <Image
-                                src="/logo.png"
+                                src="/logo.jpeg"
                                 alt="Zioc Biotech Logo"
-                                width={154}
-                                height={70}
+                                width={82}
+                                height={80}
                                 priority
                             />
                         </Link>
@@ -286,11 +286,11 @@ export default function Navbar() {
                             href="/contact"
                             variant="outlined"
                             sx={{
-                                borderColor: "#E42527",
-                                color: "#E42527",
+                                borderColor: "#28711D",
+                                color: "#28711D",
                                 fontFamily: '"Montserrat", sans-serif',
                                 fontWeight: 600,
-                                "&:hover": { backgroundColor: "#E42527", color: "#fff" },
+                                "&:hover": { backgroundColor: "#28711D", color: "#fff" },
                             }}
                         >
                             ENQUIRE NOW
@@ -325,7 +325,7 @@ export default function Navbar() {
                     alignItems="center"
                     mb={2}
                 >
-                    <Image src="/logo.png" alt="Logo" width={132} height={60} />
+                    <Image src="/logo.jpeg" alt="Logo" width={62} height={60} />
                     <IconButton onClick={toggleDrawer}>
                         <X size={24} />
                     </IconButton>
@@ -344,7 +344,7 @@ export default function Navbar() {
                                         justifyContent: "space-between",
                                         alignItems: "center",
                                         cursor: "pointer",
-                                        color: "#E42527",
+                                        color: "#28711D",
                                         fontWeight: 600,
                                     }}
                                 >
@@ -384,10 +384,10 @@ export default function Navbar() {
                     fullWidth
                     variant="contained"
                     sx={{
-                        backgroundColor: "#E42527",
+                        backgroundColor: "#28711D",
                         color: "#fff",
                         fontWeight: 600,
-                        "&:hover": { backgroundColor: "#E42527" },
+                        "&:hover": { backgroundColor: "#28711D" },
                     }}
                 >
                     ENQUIRE NOW
