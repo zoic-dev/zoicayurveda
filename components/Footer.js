@@ -13,60 +13,6 @@ import {
 import Link from "next/link";
 import { Email, Facebook, LinkedIn, LocationPin, Phone, Pinterest, X, YouTube } from "@mui/icons-material";
 
-const productLinks1 = [
-    {
-        label: 'Digestive Care',
-        href: '/product/category/digestive-care'
-    },
-    {
-        label: 'Pain & Bone Care',
-        href: '/product/category/pain-and-bone-care'
-    },
-    {
-        label: 'Mental & Sleep Care',
-        href: '/product/category/mental-and-sleep-care'
-    },
-    {
-        label: "Men's Health",
-        href: '/product/category/mens-health'
-    },
-    {
-        label: "Women's Health",
-        href: '/product/category/womens-health'
-    },
-    {
-        label: 'Hair and Skin Care',
-        href: '/product/category/hair-and-skin-care'
-    }
-];
-
-const productLinks2 = [
-    {
-        label: 'Kids health',
-        href: '/product/category/kids-health'
-    },
-    {
-        label: 'Detox & Cleaning Wellness',
-        href: '/product/category/detox-and-cleaning-wellness'
-    },
-    {
-        label: 'Respiratory Care',
-        href: '/product/category/respiratory-care'
-    },
-    {
-        label: 'Diabetes & Metabolic Wellness',
-        href: '/product/category/diabetes-and-metabolic-wellness'
-    },
-    {
-        label: 'Kidney & Urinary Care',
-        href: '/product/category/kidney-and-urinary-care'
-    },
-    {
-        label: 'Dental & Oral Care',
-        href: '/product/category/dental-and-oral-care'
-    }
-];
-
 const additionalLinks = [
     {
         label: 'About Us',
@@ -85,12 +31,12 @@ const additionalLinks = [
         href: '/frequently-asked-questions'
     },
     {
-        label: 'Services',
-        href: '/services'
+        label: 'Accreditations',
+        href: '/accreditations'
     },
     {
-        label: 'Why Choose Us?',
-        href: '/why-choose-us'
+        label: 'Third Party Manufacturing',
+        href: '/third-party-manufacturing'
     },
 ];
 
@@ -139,7 +85,7 @@ const Footer = () => {
                     <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                         <Typography
                             variant="h6"
-                            sx={{ letterSpacing: 1, fontWeight: 500, mb: 2, color: "#E42527" }}
+                            sx={{ letterSpacing: 1, fontWeight: 500, mb: 2, color: "#4c9540" }}
                         >
                             Company
                         </Typography>
@@ -154,7 +100,7 @@ const Footer = () => {
                                         color: "#acacac",
                                         fontSize: 16,
                                         transition: "0.3s",
-                                        "&:hover": { color: "#E42527" },
+                                        "&:hover": { color: "#4c9540" },
                                     }}
                                 >
                                     {item.label}
@@ -171,7 +117,7 @@ const Footer = () => {
                                 letterSpacing: 1,
                                 fontWeight: 500,
                                 mb: 2,
-                                color: "#E42527",
+                                color: "#4c9540",
                             }}
                         >
                             Contact Us
@@ -188,7 +134,7 @@ const Footer = () => {
                                         color: "#acacac",
                                         fontSize: 16,
                                         transition: "0.3s",
-                                        "&:hover": { color: "#E42527" },
+                                        "&:hover": { color: "#4c9540" },
                                     }}
                                 >
                                     info@zoicpharmaceuticals.com
@@ -205,7 +151,7 @@ const Footer = () => {
                                         color: "#acacac",
                                         fontSize: 16,
                                         transition: "0.3s",
-                                        "&:hover": { color: "#E42527" },
+                                        "&:hover": { color: "#4c9540" },
                                     }}
                                 >
                                     +91 98158-46085
@@ -224,7 +170,7 @@ const Footer = () => {
                                         fontSize: 16,
                                         transition: "0.3s",
                                         lineHeight: '1.25',
-                                        "&:hover": { color: "#E42527" },
+                                        "&:hover": { color: "#4c9540" },
                                     }}
                                 >
                                     PLOT NO. 193, Sector 82, JLPL Industrial Area, Mohali
@@ -309,7 +255,7 @@ const Footer = () => {
                                 textAlign={"center"}
                                 sx={{ color: "#acacac", mt: { xs: 2, md: 0 } }}
                             >
-                                © Zoic Biotech Pvt. Ltd. {currentYear}. All Rights Reserved
+                                © Zoic Ayurveda {currentYear}. All Rights Reserved
                             </Typography>
                         </Grid>
                     </Grid>

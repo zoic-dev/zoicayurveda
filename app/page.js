@@ -1,610 +1,464 @@
 "use client";
 
-import FAQComponent from "@/components/FAQComponent";
-import { PAGE_FAQS } from "@/data/faqsdata";
-import { Business, CalendarToday, EmojiEvents, Gavel, Groups, Handshake, Inventory2, MedicalServices, ReceiptLong, TrendingUp, Verified, Visibility } from "@mui/icons-material";
-import { Button, Container, Grid, Stack, Typography, Card, Toolbar, Box, Skeleton } from "@mui/material";
-import Link from "next/link";
-import { useState } from "react";
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Button,
+  Card,
+  CardContent,
+  Avatar,
+} from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import SimpleSlider from "@/components/SimpleSlider";
 
-const manufacturingUnits = [
-  { title: "Zoic Biotech Pvt. Ltd.", desc: "WHO-GMP certified formulation facility." },
-  { title: "Zoic Pharmaceuticals", desc: "Advanced tablet & capsule production." },
-  { title: "Zoic Softgels Pvt. Ltd.", desc: "Specialized softgel manufacturing unit." },
-];
-
-const productCategories = [
-  {
-    label: "Tablets",
-    img: "/categories/tablets.jpg",
-    link: "/product/category/tablets/244"
-  },
-  {
-    label: "Capsules",
-    img: "/categories/capsules.jpg",
-    link: "/product/category/capsules/282"
-  },
-  {
-    label: "Syrup",
-    img: "/categories/syrup.jpg",
-    link: "/product/category/syrup/314"
-  },
-  {
-    label: "Drops",
-    img: "/categories/drops.jpg",
-    link: "/product/category/drops/290"
-  },
-  {
-    label: "Shampoo",
-    img: "/categories/shampoo.jpg",
-    link: "/product/category/shampoo/629"
-  },
-  {
-    label: "Sachets",
-    img: "/categories/sachets.jpg",
-    link: "/product/category/sachets/350"
-  },
-  {
-    label: "Powders & Granules",
-    img: "/categories/protein.jpg",
-    link: "/product/category/powders-and-granules/396"
-  },
-  {
-    label: "Ointments",
-    img: "/categories/ointments.jpg",
-    link: "/product/category/ointments/358"
-  },
-  {
-    label: "OTC Products",
-    img: "/categories/otc.jpg",
-    link: "/product/category/otc/361"
-  },
-  {
-    label: "Oils",
-    img: "/categories/oils.jpg",
-    link: "/product/category/oil/351"
-  },
-  {
-    label: "Lotions",
-    img: "/categories/lotions.jpg",
-    link: "/product/category/lotion/625"
-  },
-  {
-    label: "Juices",
-    img: "/categories/juices.jpg",
-    link: "/product/category/juice/370"
-  },
-  // {
-  //   label: "Face Wash",
-  //   img: "/categories/face-wash.jpg",
-  //   link: "/product/category/face-wash/628"
-  // },
-  {
-    label: "Energy Drink",
-    img: "/categories/energy-drinks.jpg",
-    link: "/product/category/enery-drink/398"
-  },
-  // {
-  //   label: "Cream",
-  //   img: "/categories/cream.jpg",
-  //   link: "/product/category/cream/286"
-  // },
-  {
-    label: "Medicine",
-    img: "/categories/medicine.jpg",
-    link: "/product/category/medicine/15"
-  },
-  // {
-  //   label: "Churans",
-  //   img: "/categories/churans.jpg",
-  //   link: "/product/category/churan/347"
-  // },
-];
-
-export default function Home() {
-  const [loaded, setLoaded] = useState(false);
-
+export default function HomePage() {
   return (
-    <>
-      <Box sx={{ width: "100%", position: "relative" }}>
-        {/* Skeleton while video loads */}
-        {!loaded && (
-          <Skeleton
-            variant="rectangular"
-            animation="pulse"
-            sx={{
-              width: "100%",
-              borderRadius: 2,
-              height: {
-                xs: 225,
-                sm: 300,
-                md: 350,
-                lg: 500,
-                xl: 620
-              }
-            }}
-          />
-        )}
+    <Box>
 
-        {/* HERO VIDEO */}
-        <Box
-          component="video"
-          src="/homepage.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          onLoadedData={() => setLoaded(true)}
-          sx={{
-            width: "100%",
-            height: "auto",
-            display: loaded ? "block" : "none"
-          }}
-        />
-      </Box>
+      <SimpleSlider/>
 
-      {/* RED INTRO STRIP */}
-      <Stack sx={{ background: "#e42527", py: 6, color: "white" }}>
-        <Container>
-          <Grid container spacing={4} alignItems="center">
-            <Grid size={{ xs: 12, md: 5 }}>
-              <Typography variant="h4" fontWeight={700}>
-                Pharma Third Party Manufacturing
-              </Typography>
-            </Grid>
+      {/* ================= ABOUT SECTION ================= */}
+      <Box sx={{ py: 6 }}>
+        <Container maxWidth="lg">
+
+          <Grid container spacing={6} alignItems="center">
+
+            {/* LEFT CONTENT */}
             <Grid size={{ xs: 12, md: 7 }}>
-              <Typography variant="body1">
-                Zoic Biotech is a WHO-GMP certified pharmaceutical company
-                delivering high-quality medicines, nutraceuticals, and
-                healthcare products across India with world-class
-                manufacturing standards.
+              <Typography
+                variant="h4"
+                fontWeight={700}
+                gutterBottom
+              >
+                About Zoic Ayurveda
+              </Typography>
+
+              <Typography sx={{ color: "#555", mb: 2 }}>
+                Zoic Group began its journey over three decades ago with the vision
+                of delivering high-quality Ayurvedic healthcare solutions. Today,
+                Zoic stands as a leading Ayurvedic third-party manufacturing and
+                PCD company with a strong presence across India.
+              </Typography>
+
+              <Typography sx={{ color: "#555", mb: 2 }}>
+                Our product portfolio is a blend of classical Ayurvedic formulations
+                and proprietary innovations developed through extensive research
+                and clinical understanding. We cater to a wide range of health
+                concerns across all age groups.
+              </Typography>
+
+              <Typography sx={{ color: "#555" }}>
+                With 600+ registered products and certifications including GMP,
+                ISO 9001:2015, and FSSAI, we ensure unmatched quality through a
+                robust Total Quality Management system.
               </Typography>
             </Grid>
+
+            {/* RIGHT IMAGE */}
+            <Grid size={{ xs: 12, md: 5 }}>
+              <Box
+                component="img"
+                src="/about-ayurveda.jpg"
+                alt="Ayurveda Manufacturing"
+                sx={{
+                  width: "100%",
+                  borderRadius: 4,
+                  boxShadow: 3,
+                }}
+              />
+            </Grid>
+
           </Grid>
         </Container>
-      </Stack>
+      </Box>
 
-      <Toolbar />
+      {/* ================= PROCESS SECTION ================= */}
+      <Box sx={{ py: 12, background: "#f9fafb" }}>
+        <Container>
 
-      {/* MANUFACTURING UNITS */}
-      <Container>
-        <Stack spacing={6}>
-          <Typography variant="h4" fontWeight={700} textAlign="center">
-            Our Manufacturing Units
+          <Typography
+            variant="h4"
+            align="center"
+            fontWeight={700}
+            gutterBottom
+          >
+            From Idea to Finished Product
           </Typography>
 
+          <Typography
+            align="center"
+            sx={{ color: "#666", maxWidth: 700, mx: "auto", mb: 8 }}
+          >
+            A streamlined process to transform your Ayurvedic concept into a
+            high-quality, market-ready product.
+          </Typography>
+
+          <Grid container spacing={4} alignItems="center">
+
+            {[
+              {
+                title: "Choose Health Concern",
+                img: "/process/health.jpg",
+              },
+              {
+                title: "Select Dosage Form",
+                img: "/process/dosage.jpg",
+              },
+              {
+                title: "Packaging & Branding",
+                img: "/process/packaging.jpg",
+              },
+              {
+                title: "Final Product Delivery",
+                img: "/process/final.jpg",
+              },
+            ].map((step, index) => (
+              <Grid key={index} size={{ xs: 12, md: 3 }}>
+                <Box sx={{ position: "relative", textAlign: "center" }}>
+
+                  {/* CONNECTOR LINE (DESKTOP ONLY) */}
+                  {index !== 3 && (
+                    <Box
+                      sx={{
+                        display: { xs: "none", md: "block" },
+                        position: "absolute",
+                        top: "50%",
+                        right: "-100%",
+                        width: "100%",
+                        height: "2px",
+                        background: "#c8e6c9",
+                        zIndex: 0,
+                      }}
+                    />
+                  )}
+
+                  {/* STEP NUMBER */}
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: -20,
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      background: "#198754",
+                      color: "#fff",
+                      width: 40,
+                      height: 40,
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontWeight: 700,
+                      zIndex: 2,
+                    }}
+                  >
+                    {index + 1}
+                  </Box>
+
+                  {/* CARD */}
+                  <Card
+                    sx={{
+                      pt: 6,
+                      pb: 3,
+                      px: 2,
+                      borderRadius: 4,
+                      boxShadow: 3,
+                      transition: "0.3s",
+                      "&:hover": {
+                        transform: "translateY(-8px)",
+                        boxShadow: 6,
+                      },
+                    }}
+                  >
+                    {/* <Box
+                      component="img"
+                      src={step.img}
+                      alt={step.title}
+                      sx={{
+                        width: "100%",
+                        height: 140,
+                        objectFit: "cover",
+                        borderRadius: 2,
+                        mb: 2,
+                      }}
+                    /> */}
+
+                    <Typography fontWeight={600}>
+                      {step.title}
+                    </Typography>
+                  </Card>
+                </Box>
+              </Grid>
+            ))}
+
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* ================= PRODUCT CATEGORIES ================= */}
+      <Box sx={{ backgroundColor: "#f8f9fa", py: 6 }}>
+        <Container>
+          <Typography
+            variant="h4"
+            align="center"
+            fontWeight={700}
+            gutterBottom
+          >
+            Our Product Categories
+          </Typography>
+
+          <Grid container spacing={4} mt={2}>
+            {[
+              "Churnas",
+              "Capsules",
+              "Tablets",
+              "Syrups",
+              "Juices",
+              "Oils, Balms & Lotions",
+              "Personal Care",
+              "OTC Products",
+            ].map((item, i) => (
+              <Grid key={i} size={{ xs: 6, md: 3 }}>
+                <Card
+                  sx={{
+                    textAlign: "center",
+                    borderRadius: 3,
+                    p: 3,
+                    transition: "0.3s",
+                    "&:hover": {
+                      transform: "translateY(-5px)",
+                      boxShadow: 6,
+                    },
+                  }}
+                >
+                  <Avatar
+                    src={`/categories/${i+1}.jpg`}
+                    sx={{ width: 150, height: 150, mx: "auto", mb: 2 }}
+                  />
+                  <Typography fontWeight={600}>{item}</Typography>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* ================= WHY CHOOSE US ================= */}
+      <Container sx={{ py: 10 }}>
+        <Typography
+          variant="h4"
+          align="center"
+          fontWeight={700}
+          gutterBottom
+        >
+          Why Choose Zoic Ayurveda
+        </Typography>
+
+        <Grid container spacing={4} mt={2}>
+          {[
+            "GMP & ISO Certified Manufacturing",
+            "35+ Years Industry Experience",
+            "Custom Formulation Support",
+            "Pan India & Export Capability",
+          ].map((item, i) => (
+            <Grid key={i} size={{ xs: 12, md: 3 }}>
+              <Card sx={{ p: 3, textAlign: "center", borderRadius: 3 }}>
+                <Typography fontWeight={600}>{item}</Typography>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+
+      {/* ================= STATS SECTION ================= */}
+      <Box
+        sx={{
+          backgroundColor: "#198754",
+          color: "#fff",
+          py: 8,
+        }}
+      >
+        <Container>
+          <Grid container spacing={4} textAlign="center">
+            {[
+              { label: "Years Experience", value: "35+" },
+              { label: "Products", value: "600+" },
+              { label: "Clients", value: "1000+" },
+              { label: "Certifications", value: "GMP, ISO" },
+            ].map((item, i) => (
+              <Grid key={i} size={{ xs: 6, md: 3 }}>
+                <Typography variant="h4" fontWeight={700} color="white">
+                  {item.value}
+                </Typography>
+                <Typography>{item.label}</Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+      {/* ================= MISSION VISION SECTION ================= */}
+      <Box sx={{ py: 10, background: "#f8f9fa" }}>
+        <Container>
+
           <Grid container spacing={4}>
-            {manufacturingUnits.map((unit, i) => (
+
+            {[
+              {
+                title: "Our Mission",
+                content:
+                  "To provide standardized and researched herbal healthcare products through continuous innovation, creating healthier lives and delivering value to customers.",
+                color: "#198754",
+                icon: "🎯",
+              },
+              {
+                title: "Our Vision",
+                content:
+                  "To become a leading international herbal manufacturing company, building trust through quality and excellence in Ayurvedic healthcare.",
+                color: "#2c3e50",
+                icon: "👁️",
+              },
+              {
+                title: "Quality Policy",
+                content:
+                  "We are committed to continuous improvement, innovation, and transparency, ensuring the highest standards of quality in every product.",
+                color: "#0f172a",
+                icon: "✔️",
+              },
+            ].map((item, i) => (
               <Grid key={i} size={{ xs: 12, md: 4 }}>
                 <Card
                   sx={{
                     p: 4,
-                    borderRadius: 3,
-                    boxShadow: "0px 4px 20px rgba(0,0,0,0.08)",
+                    height: "100%",
+                    borderRadius: 4,
+                    background: item.color,
+                    color: "#fff",
                     transition: "0.3s",
                     "&:hover": {
-                      transform: "translateY(-6px)",
-                      boxShadow: "0px 8px 30px rgba(0,0,0,0.15)"
-                    }
+                      transform: "translateY(-8px)",
+                      boxShadow: 6,
+                    },
                   }}
                 >
-                  <Typography variant="h6" fontWeight={600}>
-                    {unit.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ mt: 1 }}>
-                    {unit.desc}
-                  </Typography>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Stack>
-      </Container>
-
-      <Toolbar />
-
-      {/* PRODUCT CATEGORIES */}
-      <Container>
-        <Stack spacing={6}>
-          <Typography variant="h4" fontWeight={700} textAlign="center">
-            Our Product Range
-          </Typography>
-
-          <Grid container spacing={2} justifyContent="center">
-            {productCategories.map((item, index) => (
-              <Grid key={index} size={{ xs: 6, sm: 4, md: 3 }}>
-                <Link href={item.link || "#"}>
-                  <Card
-                    sx={{
-                      p: 2,
-                      borderRadius: 3,
-                      textAlign: "center",
-                      boxShadow: "0px 4px 15px rgba(0,0,0,0.08)",
-                      transition: "0.3s",
-                      "&:hover": {
-                        transform: "translateY(-6px)",
-                        boxShadow: "0px 8px 25px rgba(0,0,0,0.15)"
-                      }
-                    }}
-                  >
-                    <img
-                      src={item.img}
-                      alt={item.label}
-                      style={{ width: "100%", height: "auto", marginBottom: 16 }}
-                    />
-                    <Typography fontWeight={600}>
-                      {item.label}
-                    </Typography>
-                  </Card>
-                </Link>
-              </Grid>
-            ))}
-          </Grid>
-        </Stack>
-      </Container>
-
-      <Toolbar />
-
-      {/* MISSION VISION VALUES */}
-      <Stack sx={{ py: 8, background: "#f5f5f5" }}>
-        <Container>
-          <Typography variant="h4" fontWeight={700} textAlign="center" mb={8}>
-            MISSION, VISION & VALUES
-          </Typography>
-
-          <Grid container spacing={6}>
-            {[
-              {
-                icon: <Handshake sx={{ fontSize: 40, color: "white" }} />,
-                title: "MISSION",
-                text: "Our administration and workforce focus on delivering quality medicines with protected and viable manufacturing practices.",
-              },
-              {
-                icon: <Visibility sx={{ fontSize: 40, color: "white" }} />,
-                title: "VISION",
-                text: "To become a leading pharmaceutical manufacturer providing world-class quality medicines with modern standards.",
-              },
-              {
-                icon: <EmojiEvents sx={{ fontSize: 40, color: "white" }} />,
-                title: "OUR VALUES",
-                text: "Committed to innovation, ethics, compliance and delivering excellence in pharmaceutical manufacturing.",
-              },
-            ].map((item, i) => (
-              <Grid key={i} size={{ xs: 12, md: 4 }}>
-                <Card
-                  sx={{
-                    borderRadius: 4,
-                    textAlign: "center",
-                    boxShadow: 3,
-                    height: "100%",
-                  }}
-                >
-                  <Stack spacing={3} p={4} alignItems="center">
-                    <Stack
-                      sx={{
-                        width: 80,
-                        height: 80,
-                        borderRadius: "50%",
-                        background: "#e42527",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        display: "flex",
-                      }}
-                    >
-                      {item.icon}
-                    </Stack>
-
-                    <Typography variant="h6" fontWeight={700}>
-                      {item.title}
-                    </Typography>
-
-                    <Typography variant="body2" color="text.secondary">
-                      {item.text}
-                    </Typography>
-                  </Stack>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Stack>
-
-      {/* WHY CHOOSE ZOIC - STATS SECTION */}
-      <Stack
-        sx={{
-          position: "relative",
-          py: 12,
-          backgroundImage: "url('/why-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <Stack
-          sx={{
-            position: "absolute",
-            inset: 0,
-            backgroundColor: "rgba(0,0,0,0.4)",
-          }}
-        />
-
-        <Container sx={{ position: "relative", zIndex: 2 }}>
-          <Typography
-            variant="h4"
-            fontWeight={700}
-            textAlign="center"
-            sx={{ color: "white", mb: 8 }}
-          >
-            WHY CHOOSE ZOIC BIOTECH FOR THIRD PARTY MANUFACTURING
-          </Typography>
-
-          <Grid container spacing={6}>
-            {[
-              {
-                icon: <MedicalServices sx={{ fontSize: 40, color: "#e42527" }} />,
-                title: "Nature of Business",
-                value: "Manufacturer",
-              },
-              {
-                icon: <Groups sx={{ fontSize: 40, color: "#e42527" }} />,
-                title: "Total Number of Employees",
-                value: "400 to 500 People",
-              },
-              {
-                icon: <CalendarToday sx={{ fontSize: 40, color: "#e42527" }} />,
-                title: "Year of Establishment",
-                value: "1990",
-              },
-              {
-                icon: <Business sx={{ fontSize: 40, color: "#e42527" }} />,
-                title: "Our Divisions",
-                value: "4 Specialty Divisions",
-              },
-              {
-                icon: <TrendingUp sx={{ fontSize: 40, color: "#e42527" }} />,
-                title: "Annual Turnover",
-                value: "Rs. 100-120 Crore",
-              },
-              {
-                icon: <ReceiptLong sx={{ fontSize: 40, color: "#e42527" }} />,
-                title: "GST No.",
-                value: "03AATFB5857H1Z5",
-              },
-            ].map((item, i) => (
-              <Grid key={i} size={{ xs: 12, md: 4 }}>
-                <Card
-                  sx={{
-                    p: 5,
-                    borderRadius: 4,
-                    textAlign: "center",
-                    boxShadow: 3,
-                  }}
-                >
-                  <Stack alignItems="center" spacing={2}>
+                  <Typography fontSize={40} mb={2}>
                     {item.icon}
-                    <Typography variant="h6" fontWeight={600}>
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary">
-                      {item.value}
-                    </Typography>
-                  </Stack>
+                  </Typography>
+
+                  <Typography variant="h5" fontWeight={700} gutterBottom color="white">
+                    {item.title}
+                  </Typography>
+
+                  <Typography sx={{ opacity: 0.9 }}>
+                    {item.content}
+                  </Typography>
                 </Card>
               </Grid>
             ))}
+
           </Grid>
         </Container>
-      </Stack>
+      </Box>
 
-      <Toolbar />
+      {/* ================= MD MESSAGE ================= */}
+      <Container sx={{ py: 12 }}>
+        <Grid container spacing={6} alignItems="center">
 
-      {/* CLIENT LOGOS */}
-      <Container>
-        <Stack spacing={6} sx={{ pb: 10 }}>
-          <Typography variant="h4" fontWeight={700} textAlign="center">
-            Our Trusted Clients
-          </Typography>
-
-          <Grid container spacing={4} justifyContent="center">
-            {["/clients/unimarck.png", "/clients/elder.png", "/clients/concept.png", "/clients/aarti.png", "/clients/vlcc.png"].map((logo, i) => (
-              <Grid key={i} size={{ xs: 6, md: 2 }}>
-                <Card
-                  sx={{
-                    p: 2,
-                    textAlign: "center",
-                    boxShadow: "0px 4px 15px rgba(0,0,0,0.05)"
-                  }}
-                >
-                  <img
-                    src={logo}
-                    alt="client"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                </Card>
-              </Grid>
-            ))}
+          {/* IMAGE */}
+          <Grid size={{ xs: 12, md: 3 }}>
+            <Box sx={{ textAlign: "center" }}>
+              <Avatar
+                src="/md-desk.jpg"
+                sx={{
+                  width: 160,
+                  height: 160,
+                  mx: "auto",
+                  mb: 2,
+                  boxShadow: 3,
+                }}
+              />
+              <Typography fontWeight={700}>Vivek Singla</Typography>
+              <Typography variant="body2" color="text.secondary">
+                Managing Director
+              </Typography>
+            </Box>
           </Grid>
-        </Stack>
+
+          {/* CONTENT */}
+          <Grid size={{ xs: 12, md: 9 }}>
+            <Typography variant="h4" fontWeight={700} gutterBottom>
+              From the MD’s Desk
+            </Typography>
+
+            <Typography sx={{ color: "#555", mb: 2 }}>
+              I take this opportunity to thank our valued customers, whose confidence
+              in our products inspires us to extend the best of our services and
+              continuously deliver value for their trust.
+            </Typography>
+
+            <Typography sx={{ color: "#555", mb: 2 }}>
+              Our relentless emphasis on quality, hygiene, traditional Ayurvedic
+              principles, and modern technology has helped us establish a strong and
+              respected position in the Ayurvedic medicine industry. With over three
+              decades of excellence, Zoic has grown into a trusted name, manufacturing
+              more than 650 specialized Ayurvedic products.
+            </Typography>
+
+            <Typography sx={{ color: "#555", mb: 2 }}>
+              At Zoic, quality is not just a standard — it is a promise. Our brand
+              stands for trust, consistency, and dependability. Backed by a strong
+              team and a transparent management system, we empower every individual
+              within our organization to contribute towards delivering the best.
+            </Typography>
+          </Grid>
+
+        </Grid>
+
+        <Typography sx={{ color: "#555", mb: 2 }}>
+          Our strength lies in our people, our processes, and our commitment to
+          excellence. All our products are developed under stringent GMP
+          conditions, ensuring safety, effectiveness, and reliability while
+          adhering to ethical manufacturing practices.
+        </Typography>
+
+        <Typography sx={{ color: "#555" }}>
+          We firmly believe that good health should be accessible to everyone.
+          Through science-driven herbal healthcare, we continue to move forward
+          with dedication and purpose. I sincerely seek the continued support of
+          our customers, partners, and employees who have been instrumental in
+          our journey.
+        </Typography>
       </Container>
 
-      {/* QUALITY SECTION */}
-      <Stack
+      {/* ================= CTA ================= */}
+      <Box
         sx={{
-          py: 12,
-          backgroundImage: "url('/quality-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
+          py: 10,
+          textAlign: "center",
+          background:
+            "linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)",
         }}
       >
-        {/* Dark Overlay */}
-        <Stack
-          sx={{
-            position: "absolute",
-            inset: 0,
-            backgroundColor: "rgba(0,0,0,0.55)",
-          }}
-        />
-
-        <Container sx={{ position: "relative", zIndex: 2 }}>
-          <Grid container spacing={6}>
-            {[
-              {
-                image: "/Icon-01.png",
-                title: "ISO Certified",
-                text: "Committed to high quality pharmaceutical manufacturing standards.",
-              },
-              {
-                image: "/Icon-02.png",
-                title: "Dedicated Workforce",
-                text: "Highly experienced professionals ensuring excellence.",
-              },
-              {
-                image: "/Icon-03.png",
-                title: "Ethics & Compliance",
-                text: "Strict adherence to pharma industry regulations.",
-              },
-              {
-                image: "/Icon-04.png",
-                title: "Awards & Achievements",
-                text: "Recognized for quality medicine formulation.",
-              },
-              {
-                image: "/Icon-05.png",
-                title: "Packaging",
-                text: "Advanced packaging ensuring leak-proof delivery.",
-              },
-              {
-                image: "/Icon-06.png",
-                title: "Our Quality Approach",
-                text: "Committed to follow the quality norms for manufacturing products.",
-              },
-            ].map((item, i) => (
-              <Grid key={i} size={{ xs: 12, md: 4 }}>
-                <Stack direction="row" spacing={3} alignItems="flex-start">
-
-                  {/* PERFECT ICON WRAPPER */}
-                  <Stack
-                    sx={{
-                      width: 82,
-                      height: 82,
-                      minWidth: 82,
-                      borderRadius: "50%",
-                      backgroundColor: "#e42527",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                      overflow: "hidden",
-                    }}
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </Stack>
-
-                  {/* TEXT */}
-                  <Stack spacing={1}>
-                    <Typography
-                      variant="h6"
-                      fontWeight={600}
-                      sx={{ color: "white" }}
-                    >
-                      {item.title}
-                    </Typography>
-
-                    <Typography
-                      variant="body2"
-                      sx={{ color: "#ddd", lineHeight: 1.6 }}
-                    >
-                      {item.text}
-                    </Typography>
-                  </Stack>
-
-                </Stack>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Stack>
-
-      <Toolbar />
-
-      <Container>
-        <Stack spacing={6} sx={{ pb: 10 }}>
-          <Typography variant="h4" fontWeight={700} textAlign="center">
-            Our Marketing Divisions
+        <Container>
+          <Typography variant="h4" fontWeight={700} gutterBottom>
+            Ready to Launch Your Ayurvedic Brand?
           </Typography>
 
-          <Grid container spacing={4} justifyContent="center" alignItems={"center"}>
-            {["/biozoc.png", "/zocveda.png", "/gladfem.png"].map((logo, i) => (
-              <Grid key={i} size={{ xs: 6, sm: 4, md: 3 }}>
-                <Card
-                  sx={{
-                    p: { xs: 1, sm: 3 },
-                    textAlign: "center",
-                    boxShadow: "0px 0px 0px rgba(0,0,0,0.05)"
-                  }}
-                >
-                  <img
-                    src={logo}
-                    alt="client"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Stack>
-      </Container>
+          <Typography sx={{ mb: 3 }}>
+            Partner with us for high-quality manufacturing & private labeling
+          </Typography>
 
-      {/* CTA SECTION */}
-      <Container>
-        <Stack
-          spacing={3}
-          sx={{
-            background: "#f5f5f5",
-            p: 6,
-            borderRadius: 4,
-            textAlign: "center",
-            alignItems: "center"
-          }}
-        >
-          <Typography variant="h4" fontWeight={700}>
-            Start Your Pharma Business With Us
-          </Typography>
-          <Typography variant="body1">
-            Partner with Zoic Biotech for reliable third party manufacturing
-            and PCD pharma franchise opportunities.
-          </Typography>
           <Button
-            component={Link}
-            href="/contact"
             variant="contained"
-            sx={{
-              backgroundColor: "#e42527",
-              "&:hover": { backgroundColor: "#c81f21" },
-              fontWeight: 600,
-              width: "fit-content",
-              mx: "auto"
-            }}
+            size="large"
+            endIcon={<ArrowForwardIcon />}
+            sx={{ backgroundColor: "#198754" }}
           >
             Contact Us
           </Button>
-        </Stack>
-      </Container>
-
-      <Toolbar />
-
-      <Container>
-        <FAQComponent faqs={PAGE_FAQS.home} />
-      </Container>
-
-    </>
+        </Container>
+      </Box>
+    </Box>
   );
 }

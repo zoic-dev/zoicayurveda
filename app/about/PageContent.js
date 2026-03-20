@@ -31,10 +31,10 @@ export default function PageContent() {
                 }}
             >
                 <Container maxWidth="md">
-                    <Typography variant="h3" fontWeight={700} gutterBottom>
+                    <Typography variant="h3" fontWeight={700} gutterBottom color="white">
                         About Zoic Group
                     </Typography>
-                    <Typography variant="h6" sx={{ opacity: 0.9 }}>
+                    <Typography variant="h6" sx={{ opacity: 0.9 }} color="white">
                         Since 1990 – Improving Quality of Life through Ayurvedic & Pharmaceutical Excellence
                     </Typography>
                 </Container>

@@ -47,7 +47,7 @@ const FAQS = [
   },
   {
     q: "What types of products do you manufacture?",
-    a: "Products include nutraceutical supplements, softgel capsules, gummies, herbal products, skincare, and personal care items. Multiple dosage forms are available depending on market needs and brand requirements.",
+    a: "Zoic Ayurveda manufactures premium Ayurvedic and herbal products, combining traditional knowledge with modern processes. Our range includes capsules, tablets, syrups, juices, churnas, oils, and personal care products. We offer multiple dosage forms and customization options based on market needs, all produced in GMP-certified facilities to ensure consistent quality, safety, and reliability.",
     tag: "Product Range & Quality Assurance"
   },
   {
@@ -79,41 +79,6 @@ const FAQS = [
     q: "Do you help in selecting trending products?",
     a: "Yes, manufacturers often provide guidance on market trends and high-demand products to help businesses choose profitable options.",
     tag: "Product & Formulation"
-  },
-  {
-    q: "Why are softgel capsules popular?",
-    a: "Softgels are easy to swallow, offer better absorption, and protect sensitive ingredients from environmental factors, making them a preferred choice for supplements.",
-    tag: "Softgel, Gummies & Nutraceutical Manufacturing"
-  },
-  {
-    q: "Are nutraceutical gummies effective?",
-    a: "Yes, when properly formulated, gummies deliver nutrients effectively and improve consumer compliance due to their taste and convenience.",
-    tag: "Softgel, Gummies & Nutraceutical Manufacturing"
-  },
-  {
-    q: "What nutraceutical dosage forms are available?",
-    a: "Available forms include tablets, capsules, softgels, powders, sachets, syrups, and gummies, allowing businesses to select products based on their target audience.",
-    tag: "Softgel, Gummies & Nutraceutical Manufacturing"
-  },
-  {
-    q: "Can gummies be made for kids and adults?",
-    a: "Yes, formulations can be adjusted for different age groups with suitable ingredients and dosage levels.",
-    tag: "Softgel, Gummies & Nutraceutical Manufacturing"
-  },
-  {
-    q: "What cosmetic products can be manufactured?",
-    a: "Products include skincare creams, lotions, face wash, shampoos, serums, oils, and herbal personal care products designed for various consumer needs.",
-    tag: "Cosmetics & Personal Care Manufacturing"
-  },
-  {
-    q: "Are cosmetic products tested for safety?",
-    a: "Yes, products undergo safety and stability testing to ensure they meet quality standards and are safe for consumer use.",
-    tag: "Cosmetics & Personal Care Manufacturing"
-  },
-  {
-    q: "Can I launch my own cosmetic brand?",
-    a: "Yes, private labeling allows you to sell cosmetic products under your brand name while the manufacturer handles production and packaging.",
-    tag: "Cosmetics & Personal Care Manufacturing"
   },
   {
     q: "Do you provide packaging and label design support?",

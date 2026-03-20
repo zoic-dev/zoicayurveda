@@ -148,9 +148,9 @@ export default function PostsList({ initialPage = 1 }) {
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
             sx={{
-              borderColor: "#EC1C24",
-              color: "#EC1C24",
-              "&:hover": { backgroundColor: "#EC1C24", color: "#fff" },
+              borderColor: "#28711D",
+              color: "#28711D",
+              "&:hover": { backgroundColor: "#28711D", color: "#fff" },
             }}
           >
             Previous
@@ -166,9 +166,9 @@ export default function PostsList({ initialPage = 1 }) {
             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
             disabled={currentPage >= totalPages}
             sx={{
-              borderColor: "#EC1C24",
-              color: "#EC1C24",
-              "&:hover": { backgroundColor: "#EC1C24", color: "#fff" },
+              borderColor: "#28711D",
+              color: "#28711D",
+              "&:hover": { backgroundColor: "#28711D", color: "#fff" },
             }}
           >
             Next

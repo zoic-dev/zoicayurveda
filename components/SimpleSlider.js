@@ -19,9 +19,6 @@ const SimpleSlider = () => {
             <div>
                 <img src={"/banner1.png"} style={{ width: '100%' }} />
             </div>
-            {/* <div>
-                <img src={"/banner2.jpg"} style={{ width: '100%' }} />
-            </div>
             <div>
                 <img src={"/banner3.jpg"} style={{ width: '100%' }} />
             </div>
@@ -30,7 +27,7 @@ const SimpleSlider = () => {
             </div>
             <div>
                 <img src={"/banner5.jpg"} style={{ width: '100%' }} />
-            </div> */}
+            </div>
         </Slider>
     );
 }

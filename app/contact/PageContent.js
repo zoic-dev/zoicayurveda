@@ -138,7 +138,7 @@ export default function PageContent() {
                 textAlign="center"
                 alignItems="stretch"
             >
-                <Grid size={{ xs: 12, sm: 6, md: 6 }} display="flex">
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} display="flex">
                     <Stack
                         spacing={2}
                         p={3}
@@ -162,23 +162,23 @@ export default function PageContent() {
                                 height: 60,
                                 borderRadius: "50%",
                                 color: "#fff",
-                                backgroundColor: "#E64A19",
-                                "&:hover": { backgroundColor: "#E64A19" },
+                                backgroundColor: "#28711D",
+                                "&:hover": { backgroundColor: "#28711D" },
                             }}
                         >
-                            <LocationPin fontSize="medium" />
+                            <Phone fontSize="medium" />
                         </IconButton>
                         <Typography variant="h5" fontWeight={600} gutterBottom>
-                            Corporate Office
+                            Phone
                         </Typography>
                         <Stack direction="row" justifyContent="center" spacing={2}>
-                            <Link target="_blank" href="https://maps.app.goo.gl/nd6LxA7mMFaggy3p9">
-                                <Typography variant="body1">Plot No 193, Sector 82, JLPL Industrial Area, Sahibzada Ajit Singh Nagar, Punjab 140306</Typography>
+                            <Link href="tel:9815846085">
+                                <Typography variant="body1">98158-46085</Typography>
                             </Link>
                         </Stack>
                     </Stack>
                 </Grid>
-                <Grid size={{ xs: 12, sm: 6, md: 6 }} display="flex">
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} display="flex">
                     <Stack
                         spacing={2}
                         p={3}
@@ -202,25 +202,65 @@ export default function PageContent() {
                                 height: 60,
                                 borderRadius: "50%",
                                 color: "#fff",
-                                backgroundColor: "#E64A19",
-                                "&:hover": { backgroundColor: "#E64A19" },
+                                backgroundColor: "#28711D",
+                                "&:hover": { backgroundColor: "#28711D" },
                             }}
                         >
-                            <LocationPin fontSize="medium" />
+                            <Email fontSize="medium" />
                         </IconButton>
                         <Typography variant="h5" fontWeight={600} gutterBottom>
-                            Manufacturing Plant
+                            Email
                         </Typography>
                         <Stack direction="row" justifyContent="center" spacing={2}>
-                            <Link target="_blank" href="https://maps.app.goo.gl/7F7H5bZTmywnbAvZ6">
-                                <Typography variant="body1">Plot No. C-15, Industrial Focal Point, Chanalon, Kurali, SAS Nagar, Punjab, 140103</Typography>
+                            <Link href="mailto:info@zoicpharmaceuticals.com">
+                                <Typography variant="body1">info@zoicpharmaceuticals.com</Typography>
                             </Link>
+                        </Stack>
+                    </Stack>
+                </Grid>
+                <Grid size={{ xs: 12, sm: 6, md: 4 }} display="flex">
+                    <Stack
+                        spacing={2}
+                        p={3}
+                        alignItems="center"
+                        sx={{
+                            borderRadius: 3,
+                            flexGrow: 1,
+                            justifyContent: "space-between",
+                            boxShadow: "rgb(0 0 0 / 10%) 0px 3px 8px",
+                            transition: "all 0.3s ease",
+                            backgroundColor: "#fff",
+                            "&:hover": {
+                                transform: "translateY(-4px)",
+                                boxShadow: "rgb(0 0 0 / 20%) 0px 6px 12px",
+                            },
+                        }}
+                    >
+                        <IconButton
+                            sx={{
+                                width: 60,
+                                height: 60,
+                                borderRadius: "50%",
+                                color: "#fff",
+                                backgroundColor: "#28711D",
+                                "&:hover": { backgroundColor: "#28711D" },
+                            }}
+                        >
+                            <AccessTime fontSize="medium" />
+                        </IconButton>
+                        <Typography variant="h5" fontWeight={600} gutterBottom>
+                            Timings
+                        </Typography>
+                        <Stack justifyContent="center">
+                            <Typography variant="body1">Monday - Saturday</Typography>
+                            <Typography variant="body1">9.00 AM - 6.00 PM</Typography>
                         </Stack>
                     </Stack>
                 </Grid>
             </Grid>
 
             <Toolbar />
+
 
             {/* Contact Form */}
 
@@ -290,8 +330,9 @@ export default function PageContent() {
                     </Grid>
 
                     <Grid size={{ xs: 12, sm: 6 }}>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.196480749173!2d76.72753!3d30.6565953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe9abcf4c984b%3A0xf26902378d627be7!2sZoic%20Biotech%20-%20Best%20Softgels%20Gummies%20Manufacturer%7C%20Top%20Nutraceuticals%20%26%20Health%20Food%20Supplements%20Manufacturing!5e0!3m2!1sen!2sin!4v1772085270388!5m2!1sen!2sin" width="100%" height="500" style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.1902990474287!2d76.727554!3d30.65676939999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe95a1bd20db1%3A0xce961bc354a9ad58!2sZOIC%20PHARMACEUTICALS%20-%20Ayurvedic%20PCD%20Franchise%20%2F%20Ayurvedic%20Third%20Party%20Manufacturer%20%7C%20Herbal%20Medicine%20Manufacturing%20Company!5e0!3m2!1sen!2sin!4v1773997029922!5m2!1sen!2sin" width="100%" height="500" style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </Grid>
+
                 </Grid>
             </FormProvider>
         </Container>

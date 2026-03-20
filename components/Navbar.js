@@ -94,24 +94,21 @@ export default function Navbar() {
     const navLinks = [
         { label: "Home", href: "/" },
         { label: "About", href: "/about" },
+        { label: "Ayurveda", href: "/ayurveda" },
         {
             label: "Products", href: "/products",
-            // dropdown: [
-            //     { label: "Digestive Care", href: "/product/category/digestive-care" },
-            //     { label: "Pain & Bone Care", href: "/product/category/pain-and-bone-care" },
-            //     { label: "Mental & Sleep Care", href: "/product/category/mental-and-sleep-care" },
-            //     { label: "Men's Health", href: "/product/category/mens-health" },
-            //     { label: "Women's Health", href: "/product/category/womens-health" },
-            //     { label: "Hair and Skin Care", href: "/product/category/hair-and-skin-care" },
-            //     { label: "Kids health", href: "/product/category/kids-health" },
-            //     { label: "Detox & Cleaning Wellness", href: "/product/category/detox-and-cleaning-wellness" },
-            //     { label: "Respiratory Care", href: "/product/category/respiratory-care" },
-            //     { label: "Diabetes & Metabolic Wellness", href: "/product/category/diabetes-and-metabolic-wellness" },
-            //     { label: "Kidney & Urinary Care", href: "/product/category/kidney-and-urinary-care" },
-            //     { label: "Dental & Oral Care", href: "/product/category/dental-and-oral-care" },
-            // ],
+            dropdown: [
+                { label: "Churnas", href: "/product/category/digestive-care" },
+                { label: "Capsules", href: "/product/category/pain-and-bone-care" },
+                { label: "Tablets", href: "/product/category/mental-and-sleep-care" },
+                { label: "Syrups", href: "/product/category/mens-health" },
+                { label: "Juices", href: "/product/category/womens-health" },
+                { label: "Oils, Balms & Lotions", href: "/product/category/hair-and-skin-care" },
+                { label: "Personal Care", href: "/product/category/kids-health" },
+                { label: "OTC Products", href: "/product/category/detox-and-cleaning-wellness" },
+            ],
         },
-        { label: "Services", href: "/services" },
+        { label: "Accreditations", href: "/accreditations" },
         { label: "FAQs", href: "/frequently-asked-questions" },
         { label: "Contact", href: "/contact" },
     ];
@@ -217,8 +214,8 @@ export default function Navbar() {
                     <Box>
                         <Link href="/">
                             <Image
-                                src="/logo.jpeg"
-                                alt="Zioc Biotech Logo"
+                                src="/logo.png"
+                                alt="Zoic Ayurveda Logo"
                                 width={82}
                                 height={80}
                                 priority
@@ -325,7 +322,7 @@ export default function Navbar() {
                     alignItems="center"
                     mb={2}
                 >
-                    <Image src="/logo.jpeg" alt="Logo" width={62} height={60} />
+                    <Image src="/logo.png" alt="Logo" width={62} height={60} />
                     <IconButton onClick={toggleDrawer}>
                         <X size={24} />
                     </IconButton>
