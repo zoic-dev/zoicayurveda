@@ -124,7 +124,7 @@ export default function Page() {
                 textAlign: "center"
             }}>
                 <Container maxWidth="md">
-                    <Typography variant="h3" fontWeight={700}>
+                    <Typography variant="h3" fontWeight={700} color="white">
                         Third Party Manufacturing Of Ayurvedic Products | Herbal Medicine 3rd party Manufacturers
                     </Typography>
                 </Container>
@@ -267,13 +267,13 @@ export default function Page() {
                 <Typography>Contact - +919815846085</Typography>
 
                 {/* TERMS */}
-                <Typography variant="h6" mt={6}>
+                {/* <Typography variant="h6" mt={6}>
                     Most Searched Terms
                 </Typography>
 
                 <ol>
                     {terms.map((t) => <li key={t}>{t}</li>)}
-                </ol>
+                </ol> */}
 
             </Container>
         </Box>

@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <Box>
 
-      <SimpleSlider/>
+      <SimpleSlider />
 
       {/* ================= ABOUT SECTION ================= */}
       <Box sx={{ py: 6 }}>
@@ -233,7 +233,7 @@ export default function HomePage() {
                   }}
                 >
                   <Avatar
-                    src={`/categories/${i+1}.jpg`}
+                    src={`/categories/${i + 1}.jpg`}
                     sx={{ width: 150, height: 150, mx: "auto", mb: 2 }}
                   />
                   <Typography fontWeight={600}>{item}</Typography>
@@ -315,7 +315,7 @@ export default function HomePage() {
               {
                 title: "Our Vision",
                 content:
-                  "To become a leading international herbal manufacturing company, building trust through quality and excellence in Ayurvedic healthcare.",
+                  "To become a leading international herbal manufacturing company, building trust through superior quality, innovation, and excellence in Ayurvedic healthcare.",
                 color: "#2c3e50",
                 icon: "👁️",
               },
@@ -331,7 +331,6 @@ export default function HomePage() {
                 <Card
                   sx={{
                     p: 4,
-                    height: "100%",
                     borderRadius: 4,
                     background: item.color,
                     color: "#fff",
