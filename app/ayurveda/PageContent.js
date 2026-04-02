@@ -13,21 +13,22 @@ export default function PageContent() {
     return (
         <Box>
 
-            {/* ================= HERO ================= */}
             <Box
                 sx={{
-                    py: 12,
+                    py: 10,
                     background:
-                        "linear-gradient(135deg, #0f172a 0%, #1f2937 100%)",
+                        "linear-gradient(rgba(15,61,46,0.85), rgba(15,61,46,0.85)), url('/images/herbal-bg.jpg')",
+                    backgroundSize: "cover",
                     color: "#fff",
+                    textAlign: "center",
                 }}
             >
-                <Container>
-                    <Typography variant="h3" fontWeight={700}>
+                <Container maxWidth="md">
+                    <Typography variant="h3" fontWeight={700} gutterBottom color="white">
                         Ayurveda
                     </Typography>
-                    <Typography sx={{ color: "#9ca3af", mt: 1 }}>
-                        Home • Ayurveda
+                    <Typography variant="body1" sx={{ opacity: 0.9 }} color="white">
+                        <a href="/">Home</a> • Ayurveda
                     </Typography>
                 </Container>
             </Box>

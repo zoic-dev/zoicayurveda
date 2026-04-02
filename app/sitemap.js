@@ -108,15 +108,19 @@ export default async function sitemap() {
     const staticPages = [
         "/",
         "/about",
+        "/accreditations",
+        "/ayurveda",
+        "/cretificate-and-awards",
         "/contact",
+        "/disclaimer",
         "/products",
         "/blog",
         "/frequently-asked-questions",
         "/privacy-policy",
+        "/returns-&-exchanges",
+        "/shipping-&-delivery",
         "/terms-conditions",
-        "/ptr-pts-calculator",
-        "/services",
-        "/why-choose-us"
+        "/third-party-manufacturing",
     ].map((path) => ({
         url: `${baseUrl}${path}`,
         lastModified: new Date(),

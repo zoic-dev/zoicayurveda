@@ -19,7 +19,7 @@ export const metadata = {
         "Learn about Zoic Ayurveda's return, refund, exchange, and cancellation policies.",
     robots: "index, follow",
     alternates: {
-        canonical: "https://www.ayurveda.com/returns-and-exchanges",
+        canonical: "https://www.ayurveda.com/returns-&-exchanges",
     },
 };
 
