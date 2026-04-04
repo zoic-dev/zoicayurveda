@@ -110,19 +110,19 @@ export default async function sitemap() {
         "/about",
         "/accreditations",
         "/ayurveda",
-        "/cretificate-and-awards",
+        "/certificate-and-awards",
         "/contact",
         "/disclaimer",
         "/products",
         "/blog",
         "/frequently-asked-questions",
         "/privacy-policy",
-        "/returns-&-exchanges",
-        "/shipping-&-delivery",
+        "/returns-and-exchanges",
+        "/shipping-and-delivery",
         "/terms-conditions",
         "/third-party-manufacturing",
     ].map((path) => ({
-        url: `${baseUrl}${path}`,
+        url: encodeURI(`${baseUrl}${path}`),
         lastModified: new Date(),
     }));
 
