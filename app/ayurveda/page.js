@@ -1,9 +1,9 @@
 import PageContent from "./PageContent";
 
 export const metadata = {
-    title: "Ayurveda | Zoic Ayurveda",
+    title: "Ayurveda Science | Vata, Pitta, and Kapha Dosha Explained",
     description:
-        "Ayurveda – Check out the contact information of Zoic Ayurveda.",
+        "Discover Ayurveda, the ancient Indian system of natural healing based on the three doshas Vata, Pitta, and Kapha, supporting balanced health and wellness.",
 };
 
 export default function Ayurveda() {

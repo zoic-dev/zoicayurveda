@@ -14,9 +14,9 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Shipping & Delivery Policy | Zoic Ayurveda",
+    title: "Shipping and Delivery Policy | Ayurvedic Products",
     description:
-        "Read Zoic Ayurveda's shipping, delivery, returns, and usage policies.",
+        "Learn about shipping and delivery terms for Ayurvedic product orders, including order handling, delivery guidelines, and customer responsibilities.",
     robots: "index, follow",
     alternates: {
         canonical: "https://www.ayurveda.com/shipping-and-delivery",

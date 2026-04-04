@@ -1,7 +1,7 @@
 import PageContent from "./PageContent";
 
 export const metadata = {
-    title: "Accreditations",
+    title: "Ayurvedic Manufacturing Certifications | GMP and ISO Accredited",
     description:
         "Get in touch with nutraceutical manufacturing experts in India for inquiries about products, third party manufacturing, dietary supplements, and custom solutions.",
     keywords:

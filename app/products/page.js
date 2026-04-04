@@ -4,8 +4,8 @@ import PageContent from "./PageContent";
 
 // ⭐ Basic SEO Setup
 export const metadata = {
-    title: "Our Products | Nutraceutical Products Manufacturer in India",
-    description: "Browse a wide range of nutraceutical products manufactured in India, including high-quality dietary supplements, custom formulations and third-party solutions."
+    title: "Herbal and Ayurvedic Products | Natural Healthcare Formulation",
+    description: "Browse Ayurvedic and herbal healthcare products, including immunity, digestion, liver care, and wellness formulations made using traditional herbal ingredients."
 };
 
 export default function Page() {

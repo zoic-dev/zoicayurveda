@@ -11,9 +11,9 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Terms & Conditions | Zoic Ayurveda",
+    title: "Terms and Conditions | Ayurvedic Website User Agreement",
     description:
-        "Read the Terms and Conditions governing the use of Zoic Ayurveda's website and services.",
+        "Review our terms and conditions covering website use, user responsibilities, order policies, and transactions for Ayurvedic products in India today.",
     robots: "index, follow",
     alternates: {
         canonical: "https://www.ayurveda.com/terms-and-conditions",

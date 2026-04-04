@@ -11,9 +11,9 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Disclaimer | Zoic Ayurveda",
+    title: "Disclaimer Policy | Ayurvedic Website Terms",
     description:
-        "Read the disclaimer and limitation of liability for Zoic Ayurveda website usage.",
+        "Learn about our website disclaimer, including limitations of liability, information accuracy, and usage terms for Ayurvedic product content in India.",
     robots: "index, follow",
     alternates: {
         canonical: "https://www.ayurveda.com/disclaimer",

@@ -1,8 +1,8 @@
 import PostsList from "@/components/PostLists";
 
 export const metadata = {
-  title: "Nutraceutical and Healthcare Blog in India",
-  description: "Nutraceutical and pharma blog featuring expert insights on third-party manufacturing, supplements, softgels, gummies, formulations, and wellness trends.",
+  title: "Ayurvedic and Herbal Industry Blogs",
+  description: "Latest articles on Ayurveda, herbal cosmetics, third-party manufacturing, wellness trends, and natural healthcare solutions for businesses and consumers.",
 };
 
 export default function PostsPage() {

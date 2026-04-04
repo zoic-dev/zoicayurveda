@@ -11,9 +11,9 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Privacy Policy | Zoic Ayurveda",
+    title: "Privacy Policy | Ayurvedic Products and Manufacturing Website",
     description:
-        "Read how Zoic Ayurveda and Zoic Pharmaceuticals collect, use, and protect your personal information.",
+        "Learn how personal information, such as name, email, and contact details, is collected and used when visiting our Ayurvedic products and manufacturing website.",
     robots: "index, follow",
     alternates: {
         canonical: "https://www.ayurveda.com/privacy-policy",

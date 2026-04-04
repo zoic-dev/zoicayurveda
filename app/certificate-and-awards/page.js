@@ -14,9 +14,9 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Certificate and Awards | Zoic Ayurveda",
+    title: "Ayurvedic Manufacturing Certificates and Industry Awards",
     description:
-        "Learn about Zoic Ayurveda's certificates and awards",
+        "Our certificates and awards demonstrate trusted quality standards in Ayurvedic medicine and herbal cosmetic manufacturing with certified facilities.",
     robots: "index, follow",
     alternates: {
         canonical: "https://www.ayurveda.com/certificate-and-awards",

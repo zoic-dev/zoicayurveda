@@ -1,8 +1,8 @@
 import PageContent from "./PageContent";
 
 export const metadata = {
-    title: "Best Third-Party Nutraceutical Manufacturing in India",
-    description: "Premium third party nutraceutical manufacturing in India with WHO-GMP production, FSSAI approved products, custom formulations and dietary supplement solutions."
+    title: "Best Ayurvedic Third-Party Manufacturing Company in India",
+    description: "Leading Ayurvedic third-party manufacturer offering private label herbal medicines, tablets, capsules, syrups, oils, and contract manufacturing services."
 };
 
 

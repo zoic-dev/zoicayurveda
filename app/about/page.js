@@ -1,9 +1,9 @@
 import PageContent from "./PageContent";
 
 export const metadata = {
-    title: "About Nutraceutical Manufacturers in India | Expertise & Quality",
+    title: "About Us | Ayurvedic Third-Party Manufacturing Company",
     description:
-        "India’s trusted nutraceutical manufacturing expertise, product development capabilities, and third-party manufacturing for high-quality dietary supplements.",
+        "Zoic Ayurveda is a leading Ayurvedic and herbal cosmetic manufacturing company providing third-party manufacturing and private label herbal products in India.",
 };
 
 export default function About() {

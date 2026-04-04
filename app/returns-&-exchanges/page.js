@@ -14,9 +14,9 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Returns & Exchanges | Zoic Ayurveda",
+    title: "Returns and Refund Policy | Ayurvedic Product Orders",
     description:
-        "Learn about Zoic Ayurveda's return, refund, exchange, and cancellation policies.",
+        "Learn about our returns, refunds, and exchange policy for Ayurvedic products, including defective product claims and order refund guidelines in India.",
     robots: "index, follow",
     alternates: {
         canonical: "https://www.ayurveda.com/returns-&-exchanges",

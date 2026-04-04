@@ -8,9 +8,9 @@ import Script from "next/script";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata = {
-  title: "Third-Party Manufacturing of Herbal, Nutraceuticals, Softgels, Gummies and Cosmetics",
+  title: "Ayurvedic Third-Party Manufacturer | Herbal Cosmetic Manufacture",
   description:
-    "Best Third-party pharma manufacturing in India for nutraceuticals, softgels, gummies and chemical cosmetics with WHO-GMP production and custom formulations.",
+    "Third-party manufacturing services for Ayurvedic medicines and herbal cosmetics. Private label, contract manufacturing, and herbal product manufacturing in India.",
 };
 
 export default function RootLayout({ children }) {
