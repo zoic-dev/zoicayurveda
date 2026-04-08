@@ -96,10 +96,10 @@ export async function POST(request) {
         const html = generateEmailTemplate(name, email, phone, location, message);
 
         const mailOptions = {
-            from: `"Zoic Biotech" <${process.env.EMAIL_USER}>`,
+            from: `"Zoic Ayurveda" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_TO,
             cc: email,
-            subject: "We’ve received your enquiry | Zocveda Wellness",
+            subject: "We’ve received your enquiry | Zoic Ayurveda",
             html: html,
         };
 
