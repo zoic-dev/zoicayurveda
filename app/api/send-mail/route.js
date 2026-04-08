@@ -9,11 +9,14 @@ export async function POST(request) {
             name,
             phone,
             email,
-            city,
+            location,
             message,
             captchaToken
         } = body;
 
+        // =========================
+        // 1. CAPTCHA VALIDATION
+        // =========================
         if (!captchaToken) {
             return Response.json(
                 { message: "Captcha token missing" },
@@ -41,16 +44,47 @@ export async function POST(request) {
             );
         }
 
-        // const transporter = nodemailer.createTransport({
-        //     host: "smtp.hostinger.com",
-        //     port: 465,
-        //     secure: true,
-        //     auth: {
-        //         user: process.env.EMAIL_USER,
-        //         pass: process.env.EMAIL_PASS,
-        //     }
-        // });
+        // =========================
+        // 2. SEND TO LMS (NEW)
+        // =========================
+        let lmsSuccess = true;
+        let lmsError = null;
 
+        try {
+            const lmsParams = new URLSearchParams({
+                company: "zoicpharmaceuticals",
+                name,
+                email,
+                phone,
+                location: location || "",
+                message,
+                lead_source: "163",
+                division: "114",
+            });
+
+            const lmsUrl = `${process.env.LMS_URL}?${lmsParams.toString()}`;
+
+            const lmsResponse = await fetch(lmsUrl, {
+                method: "GET",
+            });
+
+            const lmsResult = await lmsResponse.text();
+
+            if (!lmsResponse.ok) {
+                lmsSuccess = false;
+                lmsError = lmsResult;
+                console.error("LMS ERROR:", lmsResult);
+            }
+
+        } catch (err) {
+            lmsSuccess = false;
+            lmsError = err.message;
+            console.error("LMS EXCEPTION:", err);
+        }
+
+        // =========================
+        // 3. EMAIL SENDING (EXISTING)
+        // =========================
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
@@ -59,9 +93,8 @@ export async function POST(request) {
             },
         });
 
-        const html = generateEmailTemplate(name, email, phone, city, message);
+        const html = generateEmailTemplate(name, email, phone, location, message);
 
-        // User-facing subject (important)
         const mailOptions = {
             from: `"Zoic Biotech" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_TO,
@@ -72,9 +105,24 @@ export async function POST(request) {
 
         await transporter.sendMail(mailOptions);
 
-        return Response.json({ message: "Email sent successfully." });
+        // =========================
+        // 4. FINAL RESPONSE
+        // =========================
+        if (!lmsSuccess) {
+            // Email sent but LMS failed
+            return Response.json({
+                message: "Email sent, but LMS submission failed",
+                lmsError,
+            });
+        }
+
+        return Response.json({
+            message: "Email and LMS submission successful",
+        });
+
     } catch (error) {
-        console.error(error);
+        console.error("API ERROR:", error);
+
         return Response.json(
             { message: "Failed to send email.", error: error.message },
             { status: 500 }
