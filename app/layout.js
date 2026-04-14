@@ -91,7 +91,7 @@ export default function RootLayout({ children }) {
           src="https://cdn.botpenguin.com/website-bot.js"
           strategy="afterInteractive"
         >
-          {`69c0d70b50dbfb04e37a4030,690c3947e014ed43247c38b7`}
+          {`69de1ebccee2f8a252a2ac26,69d63c998639fcb260aea92b`}
         </Script>
 
       </body>
